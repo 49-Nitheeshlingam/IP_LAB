@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>workout2</title>
+        <style>
+            fieldset{
+                margin-bottom : 20px;
+            }
+            label{
+                display : inline-block;
+                width : 100px;
+                text-align : right;
+                margin-right : 10px;
+            }
+            select,input,button{
+                margin-bottom : 10px;
+            }
+        </style>
+        
+    </head>
+ <body>
+    <center>
+        <h1>ABC ACADEMY &#x1F680;</h1>
+        <h3>Training|TechNews|Freshers guide</h3>
+        <h4>Empowering young developers to levelup their skils throw training in software development Technologies 👦💻</h4>
+        <hr>
+        <h3>Registration Form</h3>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" value="Enter your name"><br>
+                <label for="Age">Age:</label>
+                <input type="number" name="Age" id="Age"><br>
+                <label >Gender:</label>
+                <input type="radio" name="gender" value="Male">Male <input type="radio" name="gender" value="Female">Female<br><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" value=""><br><br>
+                <label for="course">Select a course:</label>  
+                <select  name="course">
+        <option value="Fullstack">Fullstack</option>
+        <option value="webdev">webdev</option>
+        <option value="datascience">datascience</option>
+        <option value="ML">ML</option>
+                </select><br><br>
+        <label for="file">Uploade your Resume:</label>
+        <input type="file" name="file" ><br><br>
+                <button name="submit" onclick="alert('Successfully submitted!')" value="submit">submit</button>
+                <button name='cancel' onclick="alert('canceled!')" value='cancel'>cancel</button>
+            </fieldset>
+        </form>
+        <a href="workout1.html">Home</a>|
+        <a href="https://www.youtube.com" target="_blank">Youtube</a>|
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </center>
+
+</body>
+</html>
