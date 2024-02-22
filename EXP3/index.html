@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="Home.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>    
+        .login1 {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    
+        .input-type {
+            position: relative;
+            margin-bottom: 20px;
+        }
+    
+        .input-type input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+    
+        .input-type i {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #888;
+        }
+    
+        .btn {
+            background: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    
+        .btn:hover {
+            background: #45a049;
+        }
+    
+        .login1-options {
+            margin-top: 20px;
+            text-align: center;
+        }
+    
+        .login1-options a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+    
+        .login1-options a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <h1 id="title">BOOK HEAVEN <i class='bx bxs-book'></i></h1>
+        <button id="logb"><a href="login.html" target="_blank">Login/</a><a href="SignUp.html"
+                target="_blank">Sign_Up</a></button>
+    </div>
+    <div class="desc">
+        <div class="content">
+            <p>Welcome to Book Heaven, where the realms of knowledge unfold. Immerse yourself
+                in a world of literary wonders with our vast collection of books spanning every
+                genre imaginable. Discover the joy of reading in our cozy nooks, explore digital realms,
+                and join our vibrant community of fellow book enthusiasts. Unearth hidden treasures, attend
+                engaging events, and let the pages of wisdom guide you. At Book Heaven, every story
+                finds its reader, and every reader finds a home. Embrace the magic of words, embark on
+                literary adventures, and make Book Heaven your sanctuary for the curious mind. Welcome
+                to a place where stories come to life!</p>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <img src="fantasy.jpeg" alt="can't display" />
+                <h2>Fantasy</h2>
+            </td>
+            <td>
+                <img src="comics.jpeg" alt="can't display" />
+                <h2>comics</h2>
+            </td>
+            <td>
+                <img id="fixed-image" src="Register.jpeg" alt="Register" onclick="openRegistrationForm()">
+                <div id="registration-form">
+                    <h3>Library Registration Form</h3>
+                
+                    <div class="login1">
+                        <h1>Create an Account</h1>
+                        <div class="input-type">
+                            <input type="text" placeholder="Username" required>
+                            <i class='bx bxs-user'></i>
+                        </div>
+                        <div class="input-type">
+                            <input type="email" placeholder="Email" required>
+                            <i class='bx bxs-envelope'></i>
+                        </div>
+                        <div class="input-type">
+                            <input type="password" placeholder="Password" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+                        <div class="input-type">
+                            <input type="password" placeholder="Confirm Password" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <div class="login1-options">
+                            <p>Already have an account?<a href="#" onclick="toggleForm()"> Login</a></p>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="kids.jpeg" alt="can't display" />
+                <h2>Kids</h2>
+            </td>
+            <td>
+                <img src="Technology.jpeg" alt="can't display" />
+                <h2>Technology</h2>
+            </td>
+
+        </tr>
+    </table>
+
+    <script>
+        function toggleForm() {
+            var form = document.getElementById("registration-form");
+            form.style.display = (form.style.display === "block") ? "none" : "block";
+        }
+    
+        function openRegistrationForm() {
+            var form = document.getElementById("registration-form");
+            form.style.display = "block";
+        }
+    </script>
+</body>
+
+
+</html>
