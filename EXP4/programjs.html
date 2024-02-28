@@ -1,0 +1,168 @@
+<!-- Write a java script function that accepts a sentence as input and then it should list out
+all 3 letter words in it.-->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>p1</title>
+</head>
+<body>
+    <script>
+        function Check() {
+            var a = prompt("Enter a Sentence");
+
+            // Check if the user canceled the prompt or provided an empty sentence
+            if (!a || a.trim() === "") {
+                return "Invalid input. Please enter a sentence.";
+            }
+
+            const b = [];
+            const c = a.split(' ');
+
+            for (i = 0; i < c.length; i++) {
+                if (c[i].length == 3) {
+                    b.push(c[i]);
+                }
+            }
+
+            let ThreeLetterWords = "";
+            for (i = 0; i < b.length; i++) {
+                ThreeLetterWords += b[i] + " ";
+            }
+
+            return ThreeLetterWords.trim();
+        }
+
+        document.write("<h1>" + Check() + "</h1>");
+    </script>
+</body>
+</html> -->
+
+<!-- 2.Write a java script function that prints the second largest and smallest element in an
+array. -->
+<!-- <html>
+<head>
+    <title>p2</title>
+</head>
+<body>
+    <script>
+        var a=prompt("Enter the list of elements")
+        const b= a.split(' ')
+        for(i=0;i<b.length;i++){
+            swap=0
+            for(j=0;j<b.length-1-i;j++){
+                if(b[j]<b[j+1]){
+                    temp = b[j]
+                    b[j] = b[j+1]
+                    b[j+1] = temp
+                    swap=1
+                }
+               
+            }
+            if (swap==0){
+                    break
+                }
+        }
+        document.write("<h1>The Second largest Element is "+b[1]+" the second smallest element is "+b[b.length-2]+"</h1>")
+    </script> -->
+
+<!-- 3.Write a JavaScript program to calculate the area and perimeter of a circle[Use Objects] -->
+<!-- <html>
+        <head>
+            <title>p3</title>
+        </head>
+        <body>
+            <script>
+                const circle={
+                    radius:prompt("Enter the radius of the circle"),
+
+                    calarea:function(){
+                        return Math.PI*Math.pow(this.radius,2);
+                    },
+                    
+                    calperimeter:function(){
+                        return 2*Math.PI*this.radius;
+                    }
+
+                }
+                document.write("<h1>Circle</h1>");
+                document.write("<p>Enter radius :"+circle.radius+"</p>");
+                document.write("<p>Area of circle :"+circle.calarea().toFixed(2)+"</p>");
+                document.write("<p>Perimeter of circle :"+circle.calperimeter().toFixed(2)+"</p>")
+            </script>
+        </body>
+    </html> -->
+<!-- 4.Create a page with JavaScript to do the following. These can all be on one page.
+    (a) Prompt the user for their name.
+    (b) Use a pop-up box to welcome the user by name.
+    (c) Display the current date on the page in the following format: April 30, 2014.
+    Do not display the time. Do not "hardcode" the date; if I load the page tomorrow,
+    I should get a different date than if I load it today.
+    (d) Display the last modified date of the document -->
+    <!-- <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome Page</title>
+    </head>
+    <body>
+    
+    <script>
+        var userName = prompt("Please enter your name:");
+    
+        alert("Welcome, " + userName + "!");
+    
+        var currentDate = new Date();
+        var options = { month: 'long', day: 'numeric', year: 'numeric' };
+        var formattedDate = currentDate.toLocaleDateString('en-US', options);
+    
+        var dateParagraph = document.createElement('p');
+        dateParagraph.textContent = "Current Date: " + formattedDate;
+        document.body.appendChild(dateParagraph);
+    
+        var lastModifiedDate = new Date(document.lastModified);
+        var formattedLastModifiedDate = lastModifiedDate.toLocaleDateString('en-US', options);
+    
+        var lastModifiedParagraph = document.createElement('p');
+        lastModifiedParagraph.textContent = "Last Modified: " + formattedLastModifiedDate;
+        document.body.appendChild(lastModifiedParagraph);
+    </script>
+    
+    </body>
+    </html>
+     -->
+<!-- 5.Write a style rule when a mouse moves over a paragraph its background color has to be
+changed to yellow -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover Example</title>
+    <style>
+        p {
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var paragraph = document.querySelector('p');
+        
+        paragraph.addEventListener('mouseover', function() {
+            paragraph.style.backgroundColor = 'yellow';
+        });
+        
+        paragraph.addEventListener('mouseout', function() {
+            paragraph.style.backgroundColor = '';
+        });
+    });
+</script>
+
+<p>This is a paragraph. Move your mouse over it to change the background color.</p>
+
+</body>
+</html>
+
