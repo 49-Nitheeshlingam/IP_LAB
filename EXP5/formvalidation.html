@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FORM VALIDATION</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form action="#" target="_self">
+        <fieldset>
+            <legend>Employee Registration</legend>
+            <div class="container">
+                <div class="row">
+                    <div class="col-25">
+                        <label>Employee ID:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" placeholder="Enter your id" id="Empid">
+                        <label id="l1" style="color:red;visibility:hidden;"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Employee Name:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" placeholder="Enter your name" id="Empname">
+                        <label id="l2" style="color:red;visibility:hidden;"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>DOB:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" placeholder="DD/MM/YYYY" id="dob">
+                        <label id="l3" style="color:red;visibility:hidden;"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Gender:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="radio" name="r1" value="male">
+                        Male
+                        <input type="radio" name="r1" value="female">
+                        female
+                        <label id="l4" style="color:red;visibility:hidden;"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Age:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" placeholder="Enter your age" id="age">
+                        <label id="l5" style="color:red;visibility:hidden;"></label>"
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Address:</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="address" rows="5" cols="40"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Qualification:</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="qualify">
+                            <option value="">SELECT ANY OPTION</option>
+                            <option value="BE">BE</option>
+                            <option value="ME">ME</option>
+                            <option value="BCA">BCA</option>
+                            <option value="MCA">MCA</option>
+                        </select>
+                        <label id="qual" style="color:red;visibility:hidden;"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Contact number:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" placeholder="Enter your Mobileno" id="mobno">
+                        <label id="l6" style="color:red;visibility:hidden;"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Area of interest:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="interest">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Years of experience:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" id="exp">
+                        <label id="l8" style="color:red;visibility:hidden;"></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <button onclick="validate()">submit</button>
+                    </div>
+                    <div class="col-75">
+                        <button>clear</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

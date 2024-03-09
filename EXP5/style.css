@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+form {
+    margin: 100px 350px;
+    font-family: "poppins",sans-serif;
+    background: transparent;
+    backdrop-filter:blur(20px);
+    font-weight: 600;
+    font-size: 20px;
+    color:blue
+}
+body{
+    background-image: url('employee.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+legend{
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+}
+.container{
+    padding:20px;
+}
+label{
+    padding:12px 12px 12px 0;
+    display:inline-block;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+input[type=text],select,textarea{
+    width:75%;
+    border:1px solid #ccc;
+    border-radius:4px;
+    padding:20px;
+}
+input[type=number]{
+    width:75%;
+    border:1px solid #ccc;
+    border-radius:4px;
+    padding:20px;
+}
