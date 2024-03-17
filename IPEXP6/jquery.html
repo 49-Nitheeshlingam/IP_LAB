@@ -1,0 +1,43 @@
+<!-- Set 2:
+1. Create a hover effect on an element where it changes its opacity using jQuery.
+2. Create one textarea and one button. On click of the button the length of text entered
+inside the textarea will be displayed. -->
+<!doctype html>
+<head>
+  <title>Hover and Textarea Demo</title>
+  <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+  <style>
+    body {
+      background-color:dodgerblue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .opacity-hover {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="opacity-hover" style="color:red">Hover over this paragraph to change its opacity.</h1>
+  <textarea id="my-textarea" style="margin-top: 20px;"></textarea>
+  <button id="my-button" style="margin-top: 20px;">Get Textarea Length</button>
+  <div id="result" style="margin-top: 20px;"></div>
+  <script>
+    $('.opacity-hover').hover(function() {
+      $(this).css('opacity', 0.5);
+    }, function() {
+      $(this).css('opacity', 1);
+    });
+
+    $('#my-button').click(function() {
+      var textLength = $('#my-textarea').val().length;
+      $('#result').text('Text length: ' + textLength);
+    });
+  </script>
+</body>
+</html>
