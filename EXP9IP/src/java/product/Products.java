@@ -16,6 +16,19 @@ public class Products {
         this.price = price;
         this.inStock = inStock;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getInStock() {
+        return inStock;
+    }
+    
 }
 
 
