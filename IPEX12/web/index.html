@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details</title>
+</head>
+<body>
+    <label for="productCode">Enter Product Code:</label>
+    <input type="text" id="productCode">
+    <button onclick="getProductDetails()">Get Details</button>
+    <div id="productDetails"></div>
+
+    <script>
+        function getProductDetails() {
+            var code = document.getElementById('productCode').value;
+            var obj = new XMLHttpRequest();
+            obj.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    displayProductDetails(this);
+                }
+            };
+            obj.open("GET", "products.xml", true);
+            obj.send();
+        }
+
+        function displayProductDetails(xml) {
+            var xmlDoc = xml.responseXML;
+            var code = document.getElementById('productCode').value;
+            var products = xmlDoc.getElementsByTagName("product");
+            var details = "<h2>Product Details</h2>";
+            for (var i = 0; i < products.length; i++) {
+                var productCode = products[i].getElementsByTagName("code")[0].childNodes[0].nodeValue;
+                if (productCode === code) {
+                    var name = products[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                    var price = products[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+                    details += "<p><strong>Name:</strong> " + name + "</p>";
+                    details += "<p><strong>Price:</strong> " + price + "</p>";
+                    break;
+                }
+            }
+            document.getElementById("productDetails").innerHTML = details;
+        }
+    </script>
+</body>
+</html>

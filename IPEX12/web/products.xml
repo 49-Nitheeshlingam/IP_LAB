@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<products>
+  <product>
+    <code>1</code>
+    <name>Laptop</name>
+    <price>100000</price>
+    <description>Powerful laptop with high-resolution display, fast processor, and ample storage.</description>
+  </product>
+  <product>
+    <code>2</code>
+    <name>WashingMachine</name>
+    <price>500000</price>
+    <description>Advanced washing machine with multiple wash programs, energy-efficient, and large capacity.</description>
+  </product>
+  <product>
+    <code>3</code>
+    <name>Refrigerator</name>
+    <price>350000</price>
+    <description>Frost-free refrigerator with spacious compartments, adjustable shelves, and energy-saving features.</description>
+  </product>
+  <product>
+    <code>4</code>
+    <name>Smart TV</name>
+    <price>80000</price>
+    <description>Ultra-HD smart TV with streaming apps, voice control, and immersive sound technology.</description>
+  </product>
+</products>
