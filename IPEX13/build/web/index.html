@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grades</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+    <h2>Student Grades</h2>
+    <div id="studentsTable"></div>
+    <script>
+        var req = new XMLHttpRequest();
+        req.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                var xml = this.responseXML;
+                var xsl = new XMLHttpRequest();
+                xsl.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        var xsltProcessor = new XSLTProcessor();
+                        xsltProcessor.importStylesheet(this.responseXML);
+                        var resultDocument = xsltProcessor.transformToFragment(xml, document);
+                        document.getElementById("studentsTable").appendChild(resultDocument);
+                    }
+                };
+                xsl.open("GET", "mystyle.xsl", true);
+                xsl.send();
+            }
+        };
+        req.open("GET", "students.xml", true);
+        req.send();
+    </script>
+</body>
+</html>
